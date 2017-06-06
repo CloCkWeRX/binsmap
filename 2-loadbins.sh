@@ -16,7 +16,7 @@ date
 
 pushd data
 
-createdb $DBNAME # TODO Need to test if db exists to optionally run this
+# createdb $DBNAME # TODO Need to test if db exists to optionally run this
 
 ogr2ogr -f "PostgreSQL" PG:"dbname=$DBNAME" -t_srs EPSG:3857 glenelg/*.shp -overwrite $TABLEOPTIONS -nln glenelg
 

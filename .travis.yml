@@ -1,0 +1,7 @@
+language: node_js
+addons:
+  apt:
+    packages:
+      - gdal-bin
+script:
+  - ./doeverything.sh

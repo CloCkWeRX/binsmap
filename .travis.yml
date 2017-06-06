@@ -1,10 +1,6 @@
 language: node_js
 services:
   - postgresql
-install:
-  - sudo rm /etc/apt/sources.list.d/ubuntugis-stable-source.list
-  - sudo apt-get update -qq
-  - sudo apt-get install -qq gdal-bin
 before_script:
   - psql -c 'create database binsmap;' -U postgres
   - psql -U postgres -c "create extension postgis"

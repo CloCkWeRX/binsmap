@@ -3,6 +3,7 @@ addons:
   apt:
     packages:
       - gdal-bin
+      - postgresql-9.1-postgis-2.0
 services:
   - postgresql
 before_script:

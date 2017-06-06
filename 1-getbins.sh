@@ -41,7 +41,7 @@ wget -O alpine.geojson 'https://data.gov.au/dataset/fdb733a7-5f75-4e28-9856-a741
 wget -O casey.geojson 'https://data.gov.au/dataset/97448f62-be9b-40b4-8cc7-d062edf47aa7/resource/16402c3b-769d-4e38-b6eb-62e14757362f/download/CaseyGarbageCollectionZones.geojson'
 
 rm melbourne/*.zip
-wget -O melbourne.zip 'https://data.melbourne.vic.gov.au/api/geospatial/dmpt-2xdw?method=export&format=Shapefile'
+wget --no-check-certificate -O melbourne.zip  'https://data.melbourne.vic.gov.au/api/geospatial/dmpt-2xdw?method=export&format=Shapefile'
 unzip -o -d melbourne melbourne.zip
 #wget -O gold_coast.geojson 'http://data.gov.au/geoserver/waste-and-recycling-collection-services/wfs?request=GetFeature&typeName=1b853228_5bc4_
 

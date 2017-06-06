@@ -3,10 +3,11 @@ addons:
   apt:
     packages:
       - gdal-bin
-      - postgis2
+before_script:
+  - psql -U postgres -c "create extension postgis"
 script:
- - ./1-getbins.sh
- - ./2-loadbins.sh
- - ./3-mergebins.sh
- - ./4-dumpbins.sh
+  - ./1-getbins.sh
+  - ./2-loadbins.sh
+  - ./3-mergebins.sh
+  - ./4-dumpbins.sh
 

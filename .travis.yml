@@ -1,8 +1,6 @@
 language: node_js
-services:
-  - postgresql
 install:
-  - sudo apt-get install -y libgdal1h gdal-bin
+  - sudo apt-get install -y libgdal1h gdal-bin postgresql-9.1-postgis-2.2
 before_script:
   - psql -c 'create database bins;' -U postgres
   - psql -U postgres -c "create extension postgis"
